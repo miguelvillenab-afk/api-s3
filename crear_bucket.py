@@ -12,13 +12,13 @@ def lambda_handler(event, context):
         
         return {
             'statusCode': 200,
-            'body': json.dumps({
+            'body': {
                 'mensaje': 'Bucket creado exitosamente',
                 'bucket': nombre_bucket
-            })
+            }
         }
     except Exception as e:
         return {
             'statusCode': 500,
-            'body': json.dumps({'error': str(e)})
+            'body': {'error': str(e)}
         }
