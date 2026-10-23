@@ -2,7 +2,7 @@ import json
 import boto3
 
 def lambda_handler(event, context):
-    body = json.loads(event['body'])
+    body = event['body']
     nombre_bucket = body['bucket']
     nombre_directorio = body['directorio']
     nombre_archivo = body['archivo']
